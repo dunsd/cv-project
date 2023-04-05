@@ -25,6 +25,12 @@ const EducationForm = ({userEdu}) => {
         e.preventDefault();
     }
 
+    const removeEdu = (index) => {
+        let data = [...eduInputs];
+        data.splice(index, 1);
+        setEduInputs(data);
+    }
+
     return (
         <form className="eduForm" onSubmit={onEduSubmit}>
             {/* <label>Enter Education: </label>
@@ -54,10 +60,12 @@ const EducationForm = ({userEdu}) => {
                             value={input.desc}
                             onChange={event => onEduChange(index, event)}
                         />
+                        <button onClick={() => removeEdu(index)}>Remove Section</button>
                     </div>
                 )
             })}
             <button onClick={addSection}>Add another section</button>
+            <button onClick={onEduSubmit}>Submit</button>
         </form>
     )
 }
