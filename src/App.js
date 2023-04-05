@@ -1,6 +1,7 @@
 import './App.css';
 import UserDetails from './components/UserDetails';
 import EntryForm from './components/EntryForm';
+import EducationForm from './components/EducationForm';
 import { useState } from 'react';
 
 const App = () => {
@@ -31,6 +32,7 @@ const handleSubmit = (e) => {
         userInfo = {userInfo}
         />
       </div>
+      <EducationForm/>
     </div>
   )
 }

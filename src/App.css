@@ -1,4 +1,7 @@
+* {box-sizing:border-box;}
+
 .mainSection {
     display: flex;
+    justify-content: space-around;
     
 }

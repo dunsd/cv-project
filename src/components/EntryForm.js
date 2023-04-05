@@ -6,8 +6,7 @@ import './EntryForm.css';
 const EntryForm = ({userInfo, handleSubmit, onChange}) => {
 
     return (
-        <div className="entryForm">
-            <form onSubmit={handleSubmit}>
+            <form className="entryForm" onSubmit={handleSubmit}>
                 <label htmlFor="nameInput">Enter Name: </label>
                 <input 
                     type="text"
@@ -40,9 +39,16 @@ const EntryForm = ({userInfo, handleSubmit, onChange}) => {
                     value={userInfo.email || ""}
                     onChange={onChange}
                 />
+                <label htmlFor="phoneInput">Enter Phone Number: </label>
+                <input
+                    type="number"
+                    id="phoneInput"
+                    name="phone"
+                    value={userInfo.phone || ""}
+                    onChange={onChange}
+                />
                 <button type="submit">Submit</button>
             </form>
-        </div>
     )
 }
 

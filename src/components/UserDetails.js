@@ -11,6 +11,7 @@ const UserDetails = ({userInfo}) => {
             <div>D.O.B: {userInfo.dob}</div>
             <div>Address: {userInfo.address}</div>
             <div>Email: {userInfo.email}</div>
+            <div>Phone Number: {userInfo.phone}</div>
         </div>
     )
 }
