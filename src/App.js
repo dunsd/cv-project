@@ -5,19 +5,32 @@ import { useState } from 'react';
 
 const App = () => {
 
-  const [firstName, setfirstName] = useState("")
+  const [userInfo, setUserInfo] = useState({});
 
-  const testFunc = () => {
-    console.log(firstName);
-    setfirstName("firstName test")
-    
-  }
+  const onChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setUserInfo(values => ({...values, [name]: value}))
+    console.log(userInfo);
+}
+
+const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(userInfo);
+}
 
   return (
     <div>
-      <UserDetails name="testname" />
-      <EntryForm />
-      <button onClick={testFunc}>Test Func</button>
+      <div className='mainSection'>
+        <EntryForm 
+        userInfo = {userInfo}
+        handleSubmit = {handleSubmit}
+        onChange = {onChange}
+        />
+        <UserDetails 
+        userInfo = {userInfo}
+        />
+      </div>
     </div>
   )
 }

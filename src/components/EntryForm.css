@@ -1,0 +1,4 @@
+.entryForm {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,14 +1,16 @@
 import React from "react";
 import { Component } from "react";
+import EntryForm from "./EntryForm";
 
-const UserDetails = (props) => {
+const UserDetails = ({userInfo}) => {
 
 
     return (
         <div className="userDetails">
-            <div>{props.name}</div>
-            <div>{props.dob}</div>
-            <div>{props.address}</div>
+            <div>Name: {userInfo.name}</div>
+            <div>D.O.B: {userInfo.dob}</div>
+            <div>Address: {userInfo.address}</div>
+            <div>Email: {userInfo.email}</div>
         </div>
     )
 }
