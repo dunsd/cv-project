@@ -33,12 +33,6 @@ const EducationForm = ({userEdu}) => {
 
     return (
         <form className="eduForm" onSubmit={onEduSubmit}>
-            {/* <label>Enter Education: </label>
-            <input 
-                type="textarea"
-                rows={5}
-            />
-            <button>Add Section</button> */}
             {eduInputs.map((input, index) => {
                 return (
                     <div key={index}>

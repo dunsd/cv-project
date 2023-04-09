@@ -2,6 +2,7 @@ import './App.css';
 import UserDetails from './components/UserDetails';
 import EntryForm from './components/EntryForm';
 import EducationForm from './components/EducationForm';
+import WorkForm from './components/WorkForm';
 import { useState } from 'react';
 
 const App = () => {
@@ -33,6 +34,7 @@ const handleSubmit = (e) => {
         />
       </div>
       <EducationForm/>
+      <WorkForm/>
     </div>
   )
 }
