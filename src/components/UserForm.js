@@ -1,19 +1,18 @@
 import React from "react";
-import { useState } from 'react';
-import './EntryForm.css';
+import './UserForm.css';
 
 
-const EntryForm = ({userInfo, handleSubmit, onChange}) => {
+const UserForm = ({userInfo, handleUserSubmit, onUserChange}) => {
 
     return (
-            <form className="entryForm" onSubmit={handleSubmit}>
+            <form className="userForm" onSubmit={handleUserSubmit}>
                 <label htmlFor="nameInput">Enter Name: </label>
                 <input 
                     type="text"
                     name="name"
                     id="nameInput"
                     value={userInfo.name || ""}
-                    onChange={onChange}
+                    onChange={onUserChange}
                 />
                 <label htmlFor="dobInput">Enter DOB: </label>
                 <input 
@@ -21,7 +20,7 @@ const EntryForm = ({userInfo, handleSubmit, onChange}) => {
                     id="dobInput"
                     name="dob"
                     value={userInfo.dob || ""}
-                    onChange={onChange}
+                    onChange={onUserChange}
                 />
                 <label htmlFor="addressInput">Enter Address: </label>
                 <input 
@@ -29,7 +28,7 @@ const EntryForm = ({userInfo, handleSubmit, onChange}) => {
                     id="addressInput"
                     name="address"
                     value={userInfo.address || ""}
-                    onChange={onChange}
+                    onChange={onUserChange}
                 />
                 <label htmlFor="emailInput">Enter Email Address: </label>
                 <input
@@ -37,7 +36,7 @@ const EntryForm = ({userInfo, handleSubmit, onChange}) => {
                     id="emailInput"
                     name="email"
                     value={userInfo.email || ""}
-                    onChange={onChange}
+                    onChange={onUserChange}
                 />
                 <label htmlFor="phoneInput">Enter Phone Number: </label>
                 <input
@@ -45,11 +44,11 @@ const EntryForm = ({userInfo, handleSubmit, onChange}) => {
                     id="phoneInput"
                     name="phone"
                     value={userInfo.phone || ""}
-                    onChange={onChange}
+                    onChange={onUserChange}
                 />
                 <button type="submit">Submit</button>
             </form>
     )
 }
 
-export default EntryForm
+export default UserForm

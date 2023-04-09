@@ -1,34 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
-const EducationForm = ({userEdu}) => {
-
-    const [eduInputs, setEduInputs] = useState([
-        {
-            dates: "",
-            grade: "",
-            desc: "",
-        }
-    ])
-
-    const onEduChange = (index, event) => {
-        let data = [...eduInputs];
-        data[index][event.target.name] = event.target.value;
-        setEduInputs(data);
-    }
-
-    const addSection = () => {
-        let newSection = {dates: "", grade: "", desc: ""};
-        setEduInputs([...eduInputs, newSection]);
-    }
+const EducationForm = ({eduInputs, onEduChange, removeEdu, addSection}) => {
 
     const onEduSubmit = (e) => {
         e.preventDefault();
-    }
-
-    const removeEdu = (index) => {
-        let data = [...eduInputs];
-        data.splice(index, 1);
-        setEduInputs(data);
     }
 
     return (
@@ -40,6 +15,12 @@ const EducationForm = ({userEdu}) => {
                             name='dates'
                             placeholder="Dates"
                             value={input.dates}
+                            onChange={event => onEduChange(index, event)}
+                        />
+                        <input 
+                            name="school"
+                            placeholder="School"
+                            value={input.school}
                             onChange={event => onEduChange(index, event)}
                         />
                         <input 
