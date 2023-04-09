@@ -1,32 +1,31 @@
 import React from "react";
-import { useState } from "react";
 
-const WorkForm = () => {
+const WorkForm = ({workInputs, onWorkChange, removeWork, addWorkSection}) => {
 
-    const [workInputs, setWorkInputs] = useState([
-        {
-            dates: "",
-            company: "",
-            desc: "",
-        }
-    ])
+    // const [workInputs, setWorkInputs] = useState([
+    //     {
+    //         dates: "",
+    //         company: "",
+    //         desc: "",
+    //     }
+    // ])
 
-    const onWorkChange = (index, event) => {
-        let data = [...workInputs];
-        data[index][event.target.name] = event.target.value;
-        setWorkInputs(data);
-    }
+    // const onWorkChange = (index, event) => {
+    //     let data = [...workInputs];
+    //     data[index][event.target.name] = event.target.value;
+    //     setWorkInputs(data);
+    // }
 
-    const removeWork = (index) => {
-        let data = [...workInputs];
-        data.splice(index, 1);
-        setWorkInputs(data);
-    }
+    // const removeWork = (index) => {
+    //     let data = [...workInputs];
+    //     data.splice(index, 1);
+    //     setWorkInputs(data);
+    // }
 
-    const addWorkSection = () => {
-        let newSection = {dates: "", company: "", desc: ""};
-        setWorkInputs([...workInputs, newSection]);
-    }
+    // const addWorkSection = () => {
+    //     let newSection = {dates: "", company: "", desc: ""};
+    //     setWorkInputs([...workInputs, newSection]);
+    // }
 
     const onWorkSubmit = (e) => {
         e.preventDefault();

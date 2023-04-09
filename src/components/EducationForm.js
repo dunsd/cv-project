@@ -1,6 +1,6 @@
 import React from "react";
 
-const EducationForm = ({eduInputs, onEduChange, removeEdu, addSection}) => {
+const EducationForm = ({eduInputs, onEduChange, removeEdu, addEduSection}) => {
 
     const onEduSubmit = (e) => {
         e.preventDefault();
@@ -39,7 +39,7 @@ const EducationForm = ({eduInputs, onEduChange, removeEdu, addSection}) => {
                     </div>
                 )
             })}
-            <button onClick={addSection}>Add another section</button>
+            <button onClick={addEduSection}>Add another section</button>
             <button onClick={onEduSubmit}>Submit</button>
         </form>
     )

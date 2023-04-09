@@ -4,6 +4,7 @@ import UserForm from './components/UserForm';
 import EducationForm from './components/EducationForm';
 import WorkForm from './components/WorkForm';
 import EducationDisplay from './components/EducationDisplay';
+import WorkDisplay from './components/WorkDisplay';
 import { useState } from 'react';
 
 const App = () => {
@@ -40,10 +41,35 @@ const App = () => {
       data.splice(index, 1);
       setEduInputs(data);
   }
-  const addSection = () => {
+  const addEduSection = () => {
       let newSection = {dates: "", grade: "", desc: ""};
       setEduInputs([...eduInputs, newSection]);
     }
+
+    const [workInputs, setWorkInputs] = useState([
+      {
+          dates: "",
+          company: "",
+          desc: "",
+      }
+  ])
+
+  const onWorkChange = (index, event) => {
+      let data = [...workInputs];
+      data[index][event.target.name] = event.target.value;
+      setWorkInputs(data);
+  }
+
+  const removeWork = (index) => {
+      let data = [...workInputs];
+      data.splice(index, 1);
+      setWorkInputs(data);
+  }
+
+  const addWorkSection = () => {
+      let newSection = {dates: "", company: "", desc: ""};
+      setWorkInputs([...workInputs, newSection]);
+  }
 
   return (
     <div>
@@ -61,12 +87,20 @@ const App = () => {
         eduInputs = {eduInputs}
         onEduChange = {onEduChange}
         removeEdu = {removeEdu}
-        addSection={addSection}
+        addEduSection={addEduSection}
       />
       <EducationDisplay
         eduInputs={eduInputs}
       />
-      <WorkForm/>
+      <WorkForm
+        workInputs = {workInputs}
+        onWorkChange = {onWorkChange}
+        removeWork = {removeWork}
+        addWorkSection = {addWorkSection}
+      />
+      <WorkDisplay
+        workInputs={workInputs}
+      />
     </div>
   )
 }
