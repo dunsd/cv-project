@@ -1,31 +1,7 @@
 import React from "react";
+import './css/WorkForm.css';
 
 const WorkForm = ({workInputs, onWorkChange, removeWork, addWorkSection}) => {
-
-    // const [workInputs, setWorkInputs] = useState([
-    //     {
-    //         dates: "",
-    //         company: "",
-    //         desc: "",
-    //     }
-    // ])
-
-    // const onWorkChange = (index, event) => {
-    //     let data = [...workInputs];
-    //     data[index][event.target.name] = event.target.value;
-    //     setWorkInputs(data);
-    // }
-
-    // const removeWork = (index) => {
-    //     let data = [...workInputs];
-    //     data.splice(index, 1);
-    //     setWorkInputs(data);
-    // }
-
-    // const addWorkSection = () => {
-    //     let newSection = {dates: "", company: "", desc: ""};
-    //     setWorkInputs([...workInputs, newSection]);
-    // }
 
     const onWorkSubmit = (e) => {
         e.preventDefault();
@@ -35,22 +11,29 @@ const WorkForm = ({workInputs, onWorkChange, removeWork, addWorkSection}) => {
         <form className="workForm" onSubmit={onWorkSubmit}>
             {workInputs.map((input, index) => {
                 return (
-                    <div key={index}>
-                        <input 
-                            name="dates"
-                            value={input.dates}
-                            onChange={event => onWorkChange(index, event)}
-                        />
-                        <input
-                            name="company"
-                            value={input.company}
-                            onChange={event => onWorkChange(index, event)}
-                        />
-                        <input
-                            name="desc"
-                            value={input.desc}
-                            onChange={event => onWorkChange(index, event)}
-                        />
+                    <div className="formDiv" key={index}>
+                            <label htmlFor="datesInput">Enter dates: </label>
+                            <input 
+                                type="text"
+                                name="dates"
+                                id="datesInput"
+                                value={input.dates}
+                                onChange={event => onWorkChange(index, event)}
+                            />
+                            <label htmlFor="companyInput">Enter company name: </label>
+                            <input
+                                id="companyInput"
+                                name="company"
+                                value={input.company}
+                                onChange={event => onWorkChange(index, event)}
+                            />
+                            <label htmlFor="descInput">Enter details: </label>
+                            <textarea
+                                id="descInput"
+                                name="desc"
+                                value={input.desc}
+                                onChange={event => onWorkChange(index, event)}
+                            />
                         <button onClick={() => removeWork(index)}>Remove Section</button>
                     </div>
                 )

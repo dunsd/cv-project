@@ -74,33 +74,37 @@ const App = () => {
   return (
     <div>
       <div className='mainSection'>
-        <UserForm 
-        userInfo = {userInfo}
-        handleSubmit = {handleUserSubmit}
-        onUserChange = {onUserChange}
+        <div className='forms'>
+          <UserForm 
+            userInfo = {userInfo}
+            handleSubmit = {handleUserSubmit}
+            onUserChange = {onUserChange}
+          />
+          <EducationForm
+            eduInputs = {eduInputs}
+            onEduChange = {onEduChange}
+            removeEdu = {removeEdu}
+            addEduSection={addEduSection}
+          />
+          <WorkForm
+            workInputs = {workInputs}
+            onWorkChange = {onWorkChange}
+            removeWork = {removeWork}
+            addWorkSection = {addWorkSection}
+          />
+        </div>
+        <div className='displays'>
+        <EducationDisplay
+          eduInputs={eduInputs}
+        />
+        <WorkDisplay
+          workInputs={workInputs}
         />
         <UserDetails 
-        userInfo = {userInfo}
+          userInfo = {userInfo}
         />
+        </div>
       </div>
-      <EducationForm
-        eduInputs = {eduInputs}
-        onEduChange = {onEduChange}
-        removeEdu = {removeEdu}
-        addEduSection={addEduSection}
-      />
-      <EducationDisplay
-        eduInputs={eduInputs}
-      />
-      <WorkForm
-        workInputs = {workInputs}
-        onWorkChange = {onWorkChange}
-        removeWork = {removeWork}
-        addWorkSection = {addWorkSection}
-      />
-      <WorkDisplay
-        workInputs={workInputs}
-      />
     </div>
   )
 }

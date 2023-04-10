@@ -3,5 +3,16 @@
 .mainSection {
     display: flex;
     justify-content: space-around;
-    
+}
+
+.forms {
+    width: 40%;
+    border: solid black;
+    padding: 5%;
+}
+
+.displays {
+    width: 40%;
+    border: solid black;
+    padding: 5%;
 }

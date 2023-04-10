@@ -9,13 +9,13 @@ const WorkDisplay = ({workInputs}) => {
                     return (
                         <div key={index}>
                             <div className="workDates">
-                                Dates: {input.dates}
+                                Dates:<br />{input.dates}
                             </div>
                             <div className="workCompany">
-                                Company: {input.company}
+                                Company:<br />{input.company}
                             </div>
                             <div className="workDesc">
-                                Description: {input.desc}
+                                Description:<br />{input.desc}
                             </div>
                         </div>
                     )

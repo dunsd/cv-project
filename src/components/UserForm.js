@@ -1,5 +1,5 @@
 import React from "react";
-import './UserForm.css';
+import './css/UserForm.css';
 
 
 const UserForm = ({userInfo, handleUserSubmit, onUserChange}) => {

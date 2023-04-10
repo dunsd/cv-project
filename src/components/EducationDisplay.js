@@ -3,21 +3,21 @@ import React from "react";
 const EducationDisplay = ({eduInputs}) => {
 
     return (
-        <div> test {eduInputs.desc}
+        <div>
             {eduInputs.map((input, index) => {
                 return (
                 <div key={index}>
                      <div className="eduDates">
-                        Dates: {input.dates}
+                        Dates:<br />{input.dates}
                      </div>
                      <div className="eduSchool">
-                        School: {input.school}
+                        School:<br />{input.school}
                      </div>
                      <div className="eduGrade">
-                        Grade: {input.grade}
+                        Grade:<br />{input.grade}
                      </div>
                      <div className="eduDesc">
-                        Description: {input.desc}
+                        Description:<br />{input.desc}
                      </div>
                 </div>
                 )
