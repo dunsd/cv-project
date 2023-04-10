@@ -39,7 +39,6 @@ const WorkForm = ({workInputs, onWorkChange, removeWork, addWorkSection}) => {
                 )
             })}
             <button onClick={addWorkSection}>Add another section</button>
-            <button onClick={onWorkSubmit}>Submit</button>
         </form>
     )
 }

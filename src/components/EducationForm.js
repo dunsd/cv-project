@@ -46,7 +46,6 @@ const EducationForm = ({eduInputs, onEduChange, removeEdu, addEduSection}) => {
                 )
             })}
             <button onClick={addEduSection}>Add another section</button>
-            <button onClick={onEduSubmit}>Submit</button>
         </form>
     )
 }

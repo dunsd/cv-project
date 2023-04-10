@@ -49,8 +49,7 @@ const UserForm = ({userInfo, onUserChange}) => {
                     name="phone"
                     value={userInfo.phone || ""}
                     onChange={onUserChange}
-                />
-                <button onClick={handleUserSubmit} type="submit">Submit</button>
+                />                
             </form>
     )
 }
