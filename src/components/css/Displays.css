@@ -1,4 +1,13 @@
-.displayDiv {
+.displayDivOuter {
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.displayDivInner {
     border: solid black;
     display: flex;
     flex-direction: column;

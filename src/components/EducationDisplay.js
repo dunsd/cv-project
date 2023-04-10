@@ -1,12 +1,13 @@
 import React from "react";
+import './css/Displays.css';
 
 const EducationDisplay = ({eduInputs}) => {
 
     return (
-        <div>
+        <div className="displayDivOuter">
             {eduInputs.map((input, index) => {
                 return (
-                <div key={index}>
+                <div className="displayDivInner" key={index}>
                      <div className="eduDates">
                         Dates:<br />{input.dates}
                      </div>

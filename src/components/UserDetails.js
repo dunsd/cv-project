@@ -1,10 +1,12 @@
 import React from "react";
+import './css/Displays.css';
+
 
 const UserDetails = ({userInfo}) => {
 
 
     return (
-        <div className="userDetails">
+        <div className="displayDivOuter">
             <div>Name: {userInfo.name}</div>
             <div>D.O.B: {userInfo.dob}</div>
             <div>Address: {userInfo.address}</div>
