@@ -1,12 +1,14 @@
 .workForm {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .formDiv {
     display: flex;
     flex-direction: column;
     border: solid black;
+    padding: 5px;
 }
 
 #descInput {

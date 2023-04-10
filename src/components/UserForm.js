@@ -2,7 +2,11 @@ import React from "react";
 import './css/UserForm.css';
 
 
-const UserForm = ({userInfo, handleUserSubmit, onUserChange}) => {
+const UserForm = ({userInfo, onUserChange}) => {
+
+    const handleUserSubmit = (e) => {
+        e.preventDefault();
+    }
 
     return (
             <form className="userForm" onSubmit={handleUserSubmit}>
@@ -46,7 +50,7 @@ const UserForm = ({userInfo, handleUserSubmit, onUserChange}) => {
                     value={userInfo.phone || ""}
                     onChange={onUserChange}
                 />
-                <button type="submit">Submit</button>
+                <button onClick={handleUserSubmit} type="submit">Submit</button>
             </form>
     )
 }

@@ -1,4 +1,6 @@
 .userForm {
     display: flex;
     flex-direction: column;
+    border: solid black;
+    padding: 5px;
 }

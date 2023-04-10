@@ -7,6 +7,7 @@ import EducationDisplay from './components/EducationDisplay';
 import WorkDisplay from './components/WorkDisplay';
 import { useState } from 'react';
 
+
 const App = () => {
 
   const [userInfo, setUserInfo] = useState({});
@@ -15,10 +16,6 @@ const App = () => {
     const name = e.target.name;
     const value = e.target.value;
     setUserInfo(values => ({...values, [name]: value}))
-  }
-
-  const handleUserSubmit = (e) => {
-      e.preventDefault();
   }
 
   const [eduInputs, setEduInputs] = useState([
@@ -77,7 +74,6 @@ const App = () => {
         <div className='forms'>
           <UserForm 
             userInfo = {userInfo}
-            handleSubmit = {handleUserSubmit}
             onUserChange = {onUserChange}
           />
           <EducationForm
@@ -94,15 +90,15 @@ const App = () => {
           />
         </div>
         <div className='displays'>
-        <EducationDisplay
-          eduInputs={eduInputs}
-        />
-        <WorkDisplay
-          workInputs={workInputs}
-        />
-        <UserDetails 
-          userInfo = {userInfo}
-        />
+          <UserDetails 
+            userInfo = {userInfo}
+          />
+          <EducationDisplay
+            eduInputs={eduInputs}
+          />
+          <WorkDisplay
+            workInputs={workInputs}
+          />        
         </div>
       </div>
     </div>

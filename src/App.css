@@ -1,18 +1,29 @@
 * {box-sizing:border-box;}
 
+#root {
+    font-family: 'Roboto', sans-serif;
+}
+
 .mainSection {
     display: flex;
     justify-content: space-around;
 }
 
 .forms {
+    display: flex;
+    flex-direction: column;
     width: 40%;
     border: solid black;
     padding: 5%;
+    gap: 50px;
 }
 
 .displays {
+    display: flex;
+    flex-direction: column;
     width: 40%;
     border: solid black;
     padding: 5%;
+    gap: 50px;
+
 }
