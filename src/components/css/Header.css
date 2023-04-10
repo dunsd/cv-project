@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border-bottom: solid grey;
+    background-color: lightgrey;
+    margin-bottom: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.name {
+    font-size: 1.2em;
+    font-weight: 500;
+}

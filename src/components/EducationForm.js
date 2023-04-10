@@ -1,5 +1,5 @@
 import React from "react";
-import './css/EducationForm.css'
+import './css/Forms.css'
 
 const EducationForm = ({eduInputs, onEduChange, removeEdu, addEduSection}) => {
 

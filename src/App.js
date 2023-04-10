@@ -5,6 +5,7 @@ import EducationForm from './components/EducationForm';
 import WorkForm from './components/WorkForm';
 import EducationDisplay from './components/EducationDisplay';
 import WorkDisplay from './components/WorkDisplay';
+import Header from './components/Header';
 import { useState } from 'react';
 
 
@@ -70,6 +71,7 @@ const App = () => {
 
   return (
     <div>
+      <Header/>
       <div className='mainSection'>
         <div className='forms'>
           <UserForm 

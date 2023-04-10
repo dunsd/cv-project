@@ -1,7 +1,14 @@
 * {box-sizing:border-box;}
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 #root {
     font-family: 'Roboto', sans-serif;
+    
+
 }
 
 .mainSection {
@@ -29,5 +36,9 @@
 }
 
 button {
-    color: grey;
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-weight: 500;
+    border-radius: 5px;
 }

@@ -1,4 +1,4 @@
-.eduForm {
+.eduForm, .workForm {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -9,11 +9,20 @@
     flex-direction: column;
     border: solid black;
     padding: 5px;
-    
+    border-radius: 5px;
+    gap: 5px;
 }
 
 #descInput {
     height: 100px;
     resize: none;
     overflow: auto;
+}
+
+.userForm {
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    padding: 5px;
+    border-radius: 5px;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import './css/WorkForm.css';
+import './css/Forms.css';
 
 const WorkForm = ({workInputs, onWorkChange, removeWork, addWorkSection}) => {
 
