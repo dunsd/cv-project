@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className="title">CV Form Entry</div>
-            <div className="name">Daniel Parker</div>
+            <div className="name">By Daniel Parker</div>
         </div>
     )
 }

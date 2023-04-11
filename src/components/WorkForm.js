@@ -15,6 +15,7 @@ const WorkForm = ({workInputs, onWorkChange, removeWork, addWorkSection}) => {
                             <label htmlFor="datesInput">Enter dates: </label>
                             <input 
                                 type="text"
+                                placeholder="Dates"
                                 name="dates"
                                 id="datesInput"
                                 value={input.dates}
@@ -22,6 +23,7 @@ const WorkForm = ({workInputs, onWorkChange, removeWork, addWorkSection}) => {
                             />
                             <label htmlFor="companyInput">Enter company name: </label>
                             <input
+                                placeholder="Company Name"
                                 id="companyInput"
                                 name="company"
                                 value={input.company}
@@ -29,6 +31,7 @@ const WorkForm = ({workInputs, onWorkChange, removeWork, addWorkSection}) => {
                             />
                             <label htmlFor="descInput">Enter details: </label>
                             <textarea
+                                placeholder="Description"
                                 id="descInput"
                                 name="desc"
                                 value={input.desc}

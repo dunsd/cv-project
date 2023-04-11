@@ -14,6 +14,7 @@ html, body {
 .mainSection {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 50px;
 }
 
 .forms {
